@@ -2,19 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Camera permission -->
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <!-- Read media permissions (for thumbnail display) -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
-        android:minSdkVersion="33" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
-
-    <!-- Camera features -->
-    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <!-- 👇 TAMBAHKAN PERMISSIONS INI -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
     <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
         android:allowBackup="true"
@@ -29,9 +25,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.KameraKu"
-            android:screenOrientation="portrait">
+            android:theme="@style/Theme.KameraKu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
